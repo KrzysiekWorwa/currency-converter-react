@@ -6,9 +6,8 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+#root {
   font-family: "Lato", sans-serif;
-  margin: 10px;
   color: #eee;
   display: flex;
   align-items: center;
@@ -23,18 +22,4 @@ html {
   .body {
   background-size: center;
   }
-}
-
-.container {
-  flex-basis: 700px;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-}
-
-.header {
-  color: hsl(180, 97%, 40%);
-  margin: 14px;
 }
