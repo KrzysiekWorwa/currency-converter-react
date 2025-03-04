@@ -1,4 +1,4 @@
-import Container from "./Container";
+import "./index.css"
 import Form from "./Form";
 import { currencies } from "./currencies";
 import React, { useState } from "react";
