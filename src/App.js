@@ -1,4 +1,4 @@
-import "./index.css"
+import Container from "./Container";
 import Form from "./Form";
 import { currencies } from "./currencies";
 import React, { useState } from "react";
@@ -21,13 +21,14 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Form
-        result={result}
-        calculateResult={calculateResult}
-      />
-    </div>
+    <Container>
+     <Form
+     result={result}
+     calculateResult={calculateResult}
+     />
+      </Container>
   );
 }
+
 
 export default App;
