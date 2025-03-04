@@ -1,5 +1,6 @@
 import Container from "./Container";
 import Form from "./Form";
+import { currencies } from "./currencies";
 
 
 function App() {
@@ -20,7 +21,10 @@ const calculateResult = (currency, amount) => {
 
   return (
     <Container>
-     <Form/>
+     <Form
+     result={result}
+     calculateResult={calculateResult}
+     />
       </Container>
   );
 }
