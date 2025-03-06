@@ -2,7 +2,6 @@ import "./style.css";
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import { DateCounter } from "./Date";
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
@@ -15,7 +14,6 @@ export const Form = ({ calculateResult, result }) => {
   }
   return (
     <form className="form" onSubmit={onSubmit}>
-      <DateCounter />
       <h1 className="form__header">Kalkulator walut</h1>
       <p>
         <label>

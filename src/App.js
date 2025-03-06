@@ -2,6 +2,7 @@ import Container from "./Container";
 import Form from "./Form";
 import { currencies } from "./currencies";
 import React, { useState } from "react";
+import { DateCounter } from "./Date";
 
 
 function App() {
@@ -22,11 +23,12 @@ function App() {
 
   return (
     <Container>
-     <Form
-     result={result}
-     calculateResult={calculateResult}
-     />
-      </Container>
+      <DateCounter />
+      <Form
+        result={result}
+        calculateResult={calculateResult}
+      />
+    </Container>
   );
 }
 
