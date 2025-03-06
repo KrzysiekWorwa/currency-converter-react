@@ -1,0 +1,6 @@
+
+.date {
+    display:flex;
+    justify-content: end;
+    margin: 5px;
+}
