@@ -4,7 +4,7 @@ import "./style.css"
 
 export const DateCounter = () => {
 
-    const [currentDate, setCurrentDate] = useState(new Date());
+    const [date, setCurrentDate] = useState(new Date());
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentDate(new Date());
@@ -15,18 +15,16 @@ export const DateCounter = () => {
         };
     }, []);
 
-    const day = currentDate.toLocaleDateString("pl", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-    });
-
-    const time = currentDate.toLocaleTimeString();
-    const dateAndTime = `${day}, ${time}`;
-
-
     return (
-        <div className="date">Dzisiaj jest {dateAndTime}</div>
-    );
+        <div className="date">Dzisiaj jest {date.toLocaleString(undefined, {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        })}
+        </div>
+    )
 }
