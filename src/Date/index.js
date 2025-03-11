@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useCurrentDate } from "./useCurrentDate";
 import { DataInfo } from "./styled";
 
 
 export const DateCounter = () => {
-
-    const [date, setCurrentDate] = useState(new Date());
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setCurrentDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, []);
+    const date = useCurrentDate();
 
     return (
         <DataInfo>
