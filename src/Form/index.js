@@ -1,4 +1,4 @@
-import "./style.css";
+import { LabelText, FormField, SelectField, Info, Button, Header } from "./styled";
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
@@ -13,17 +13,17 @@ export const Form = ({ calculateResult, result }) => {
 
   }
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <h1 className="form__header">Kalkulator walut</h1>
+    <form
+     onSubmit={onSubmit}>
+      <Header>Kalkulator walut</Header>
       <p>
         <label>
-          <span className="form__labelText">
+          <LabelText>
             Kwota w zł*
-          </span>
-          <input
+          </LabelText>
+          <FormField
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
-            className="form__field"
             placeholder="Wpisz kwotę w złotówkach"
             type="number"
             required
@@ -32,11 +32,10 @@ export const Form = ({ calculateResult, result }) => {
       </p>
       <p>
         <label>
-          <span className="form__labelText">
+          <LabelText>
             Waluta
-          </span>
-          <select
-            className="form__field"
+          </LabelText>
+          <SelectField
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -47,13 +46,13 @@ export const Form = ({ calculateResult, result }) => {
                 {currency.name}
               </option>
             )))}
-          </select>
+          </SelectField>
         </label>
       </p>
       <p>
-        <button className="form__button">Przelicz!</button>
+        <Button>Przelicz!</Button>
       </p>
-      <p className="form__info">Kursy pochodzą ze strony nbp.pl</p>
+      <Info>Kursy pochodzą ze strony nbp.pl</Info>
       <Result result={result} />
     </form>
   );
