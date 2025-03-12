@@ -1,4 +1,4 @@
-import { LabelText, FormField, SelectField, Info, Button, Header } from "./styled";
+import { LabelText, FormField, Info, Button, Header } from "./styled";
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
@@ -14,7 +14,7 @@ export const Form = ({ calculateResult, result }) => {
   }
   return (
     <form
-     onSubmit={onSubmit}>
+      onSubmit={onSubmit}>
       <Header>Kalkulator walut</Header>
       <p>
         <label>
@@ -35,7 +35,8 @@ export const Form = ({ calculateResult, result }) => {
           <LabelText>
             Waluta
           </LabelText>
-          <SelectField
+          <FormField
+            as="select"
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -46,7 +47,7 @@ export const Form = ({ calculateResult, result }) => {
                 {currency.name}
               </option>
             )))}
-          </SelectField>
+          </FormField>
         </label>
       </p>
       <p>

@@ -15,14 +15,6 @@ export const FormField = styled.input`
     border-radius: 5px;
 `; 
 
-export const SelectField = styled.select`
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
-`; 
-
 export const Info = styled.p`
     font-size: 14px;
     text-align: center;
