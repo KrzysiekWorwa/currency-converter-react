@@ -80,10 +80,7 @@ export const Form = () => {
               <p>
                 <Button>Przelicz!</Button>
               </p>
-              <Info>Kursy pochodzą ze strony currencyapi.com <br /> Aktualne na dzień: <strong>{lastUpdatedAt.toLocaleDateString(undefined, {
-                day: "numeric",
-                month: "long",
-                year: "numeric",})}</strong></Info>
+              <Info>Kursy pochodzą ze strony currencyapi.com <br /> Aktualne na dzień: <strong>{lastUpdatedAt.toLocaleDateString(undefined)}</strong></Info>
               <Result result={result} />
             </>
           )
