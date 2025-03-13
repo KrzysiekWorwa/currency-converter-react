@@ -25,7 +25,10 @@ export const Form = () => {
     event.preventDefault();
     calculateResult(currency, amount);
 
-  }
+  }  
+  const lastUpdatedAt = ratesData?.meta?.last_updated_at
+    ? new Date(ratesData.meta.last_updated_at)
+    : null;
 
   return (
     <form
@@ -77,7 +80,10 @@ export const Form = () => {
               <p>
                 <Button>Przelicz!</Button>
               </p>
-              <Info>Kursy pochodzą ze strony currencyapi.com</Info>
+              <Info>Kursy pochodzą ze strony currencyapi.com <br /> Aktualne na dzień: <strong>{lastUpdatedAt.toLocaleDateString(undefined, {
+                day: "numeric",
+                month: "long",
+                year: "numeric",})}</strong></Info>
               <Result result={result} />
             </>
           )
