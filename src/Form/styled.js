@@ -43,3 +43,11 @@ export const Header = styled.h1`
     color: hsl(180, 97%, 40%);
     margin: 14px;
 `;
+
+export const Loading = styled.p`
+    color: hsl(180, 97%, 40%);
+`;
+
+export const Fail = styled.p`
+    color: hsl(29, 92.70%, 48.00%);
+`;

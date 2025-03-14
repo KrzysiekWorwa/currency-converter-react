@@ -1,4 +1,4 @@
-import { LabelText, FormField, Info, Button, Header } from "./styled";
+import { LabelText, FormField, Info, Button, Header, Loading, Fail } from "./styled";
 import React, { useState } from "react";
 import { Result } from "./Result";
 import { useRatesData } from "./useRatesData";
@@ -36,11 +36,11 @@ export const Form = () => {
       <Header>Kalkulator walut</Header>
       {ratesData.state === "loading"
         ? (
-          <p>Ładuję kursy</p>
+          <Loading>Sekunda... <br />Ładuję kursy walut ze strony currencyapi.com...</Loading>
         )
         : (
           ratesData.state === "error" ? (
-            <p>Coś poszło nie tak</p>
+            <Fail>Coś poszło nie tak... Sprawdź, czy masz połączenie z internetem</Fail>
           ) : (
             <>
               <p>
