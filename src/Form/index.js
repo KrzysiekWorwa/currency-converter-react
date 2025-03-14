@@ -26,8 +26,8 @@ export const Form = () => {
     calculateResult(currency, amount);
 
   }  
-  const lastUpdatedAt = ratesData?.meta?.last_updated_at
-    ? new Date(ratesData.meta.last_updated_at)
+  const lastUpdatedAt = ratesData.meta
+    ? new Date(ratesData.meta)
     : null;
 
   return (
